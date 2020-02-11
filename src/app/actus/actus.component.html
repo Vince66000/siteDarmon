@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-8" style="float: none; margin: 0 auto">
+    <h2>Vos actus</h2>
+    <div class="list-group">
+      <button class="list-group-item"
+              *ngFor="let actu of actus; let i = index"
+              (click)="onVoirActu(i)">
+        <h1 class="list-group-item-heading">{{actu.titre}}</h1>
+        <h2>{{actu.dateDebut}}</h2>
+        <h4>{{actu.dateFin}}</h4>
+        <button class="btn btn-danger pull-right" (click)="onSuppressionLivre(actu)">Supprimer livre</button>
+      </button>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-8" style="float: none; margin: 0 auto">
+    <h2>Nouvelle actualité</h2>
+    <form [formGroup]="actuForm" (ngSubmit)="onEnregistrerActu()">
+      <div class="form-group">
+        <label for="titre">Titre</label>
+        <input type="text" class="form-control" id="titre" formControlName="titre">
+      </div>
+      <div class="form-group">
+        <label for="resume">Résumé</label>
+        <textarea type="text" class="form-control" id="resume" formControlName="resume"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dateDebut">Date de début</label>
+        <input type="date" class="form-control" id="dateDebut" formControlName="dateDebut">
+      </div>
+      <div class="form-group">
+        <label for="dateFin">Date de fin</label>
+        <input type="date" class="form-control" id="dateFin" formControlName="dateFin">
+      </div>
+      <div class="form-group">
+        <label for="heureDebut">Heure de début</label>
+        <input type="text" class="form-control" id="heureDebut" formControlName="heureDebut">
+      </div>
+      <div class="form-group">
+        <label for="heureFin">Heure de fin</label>
+        <input type="text" class="form-control" id="heureFin" formControlName="heureFin">
+      </div>
+      <div class="form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" class="form-control" id="adresse" formControlName="adresse">
+      </div>
+      <div class="form-group">
+        <label for="codePostal">Code postal</label>
+        <input type="text" class="form-control" id="codePostal" formControlName="codePostal">
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville</label>
+        <input type="text" class="form-control" id="ville" formControlName="ville">
+      </div>
+
+      <button class="btn btn-success" [disabled]="actuForm.invalid" type="submit"(click)="onEnregistrerActu()">Enregistrer</button>
+
+    </form>
+  </div>
+
+</div>

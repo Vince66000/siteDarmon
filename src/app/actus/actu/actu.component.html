@@ -1,0 +1,16 @@
+<div class="Row" >
+  <div class="col-8" style="float: none; margin: 0 auto">
+    <div class="card">
+      <div class="card-header">
+        <h1>{{actu.titre}}</h1>
+      </div>
+      <div class="card-body">
+        <h2> Du :{{actu.dateFin}} au : {{actu.dateFin}}</h2>
+        <p>{{actu.resume}}</p>
+        <p>Rendez vous à {{actu.adresse}}, {{actu.codePostal}}, {{actu.ville}} </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="btn btn-primary " (click)="onBack()">Retour</div>
+</div>

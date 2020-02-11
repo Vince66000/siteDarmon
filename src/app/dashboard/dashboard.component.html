@@ -1,0 +1,91 @@
+<div class="container-fluid mt-5">
+<div class="row">
+
+  <div class="col-4">
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th colspan="2" class="text-center">Gérer vos livres</th>
+      </tr>
+      <tr>
+        <th colspan="2" class="text-center" style="background-color: #28a745">
+          <button class=" btn btn-success" (click)="onCreerLivre()">Nouveau livre</button>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let livre of livres; let i = index">
+        <td>{{ livre.titre }}</td>
+        <td class="text-right">
+          <a class="btn btn-info">Modifier</a>
+          <a class="btn btn-danger" (click)="onSuppressionLivre(livre)">Supprimer</a>
+        </td>
+      </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+
+<div class="col-4">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th colspan="2" class="text-center">Gérer vos actualités</th>
+      </tr>
+      <tr>
+        <th colspan="2" class="text-center" style="background-color: #28a745">
+          <button class=" btn btn-success" (click)="onCreerActu()">Nouvelle actualité</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let actu of actus; let i = index">
+      <td>{{ actu.titre }}</td>
+
+      <td class="text-right">
+        <a class="btn btn-info">Modifier</a>
+        <a class="btn btn-danger">Supprimer</a>
+      </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+</div>
+  <div class="col-4">
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th colspan="2" class="text-center">Gérer les articles</th>
+      </tr>
+      <tr>
+        <th colspan="2" class="text-center" style="background-color: #28a745">
+          <button class=" btn btn-success" (click)="onCreerArticle()" >Nouvel article</button>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let actu of actus; let i = index">
+        <td>{{ actu.titre }}</td>
+
+        <td class="text-right">
+          <a class="btn btn-info">Modifier</a>
+          <a class="btn btn-danger">Supprimer</a>
+        </td>
+      </tr>
+
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+</div>

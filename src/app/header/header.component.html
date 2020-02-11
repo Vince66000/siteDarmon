@@ -1,0 +1,48 @@
+<div class="jumbotron">
+  <h1 class="nom" style="font-family: test">Franc Maçonnerie et Alchimie</h1>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['accueuil']">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ouvrages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['livres/0']">Rêves et Dé-lires initiatiques</a>
+          <a class="dropdown-item"[routerLink]="['livres/1']" >Harmonie des structures géométriques</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="['livres']">Tous les livres</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"[routerLink]="['contact']">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['actus']" >Actualités</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item" *ngIf="! isAuth">
+        <a  class="nav-link" [routerLink]="['auth/signup']">Créer un compte</a>
+      </li>
+      <li class="nav-item" *ngIf="! isAuth">
+        <a  class="nav-link" [routerLink]="['auth/signin']">Se connecter</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuth">
+        <a class="nav-link" (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer">Déconnexion</a>
+      </li>
+      <li class=nav-item *ngIf="isAuth">
+        <a class="nav-link" [routerLink]="['tableau-de-bord']">Tableau de bord</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

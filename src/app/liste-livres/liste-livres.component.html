@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-8" style="float: none; margin: 0 auto">
+    <h2>Vos livres</h2>
+    <div class="list-group">
+      <button class="list-group-item"
+              *ngFor="let livre of livres; let i = index"
+              (click)="onVoirLivre(i)">
+        <h1 class="list-group-item-heading">{{livre.titre}}</h1>
+          <h2>{{livre.auteur}}</h2>
+          <h4>{{livre.annee}}</h4>
+          <button class="btn btn-danger pull-right" (click)="onSuppressionLivre(livre)">Supprimer livre</button>
+      </button>
+    </div>
+
+  </div>
+</div>
